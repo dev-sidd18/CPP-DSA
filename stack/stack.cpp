@@ -1,56 +1,56 @@
-// #include <bits/stdc++.h>
-// using namespace std;
-// #define MAXSIZE 50
-// int mystack[MAXSIZE];
-// int top=-1;
-// int push(){
-// if(top>MAXSIZE-1){
-//     cout<<"overflow";
-//     return -1;
-// }
-// else{
-//     int x;
-//     cout<<"enter number"<<" ";
-//     cin>>x;
-//     top=top+1;
-//     mystack[top]=x;
-// }
-// }
-// int pop(){
-// if(top=-1){
-//     cout<<"underflow";
-//     return -1;
-// }
-// else{
-//     int x=mystack[top];
-//     top=top-1; 
-//     return x;
-// }
-// }
-// void  display(){
-//     for(int i=top;i>=0;i--){
-//         cout<<mystack[i]<<" ";
-//     }
-// }
-// int main(){
-//     int choice;
-//     do{
-//         cin>>choice;
-//         switch (choice)
-//         {
-//         case 1: push();
-//         break;
-//         case 2: cout<<pop();
-//         break;
-//         case 3: display();
-//         break;
+#include <bits/stdc++.h>
+using namespace std;
+#define MAXSIZE 50
+int mystack[MAXSIZE];
+int top=-1;
+int push(){
+if(top>MAXSIZE-1){
+    cout<<"overflow";
+    return -1;
+}
+else{
+    int x;
+    cout<<"enter number"<<" ";
+    cin>>x;
+    top=top+1;
+    mystack[top]=x;
+}
+}
+int pop(){
+if(top=-1){
+    cout<<"underflow";
+    return -1;
+}
+else{
+    int x=mystack[top];
+    top=top-1; 
+    return x;
+}
+}
+void  display(){
+    for(int i=top;i>=0;i--){
+        cout<<mystack[i]<<" ";
+    }
+}
+int main(){
+    int choice;
+    do{
+        cin>>choice;
+        switch (choice)
+        {
+        case 1: push();
+        break;
+        case 2: cout<<pop();
+        break;
+        case 3: display();
+        break;
         
-//         default: cout<<"you choice is wrong";
-//             break;
-//         }
-//     }
-//     while(choice<=3);
-// }
+        default: cout<<"you choice is wrong";
+            break;
+        }
+    }
+    while(choice<=3);
+}
 
 // #include <bits/stdc++.h>
 // using namespace std;
