@@ -11,16 +11,23 @@ struct Node {
     }
 };
 
-Node insertionCBT(Node* root, int val, queue<Node*>&q){
+Node* insertionCBT(Node* root, int val, queue<Node*>&q){
 Node* newNode= new Node(val);
 if(root==NULL){
-    root=new Node(val);
     root=newNode;
     q.push(root);
-    return root;
+    return root ;
 }
-Node* curr=q.pop();
-
+Node* curr=q.front();
+if(curr->left==NULL){
+    curr->left=newNode;
+}
+else if(curr->right==NULL){
+    curr->right=newNode;
+    q.pop();
+}
+q.push(newNode);
+return root;
 }
 vector<vector<int>> levelOrder(Node* root) {
     vector<vector<int>> result;
@@ -43,17 +50,14 @@ vector<vector<int>> levelOrder(Node* root) {
     return result;
 }
 int main() {
-    Node* root = new Node(1);
-    root->left = new Node(2);
-    root->right = new Node(3);
-    root->left->left = new Node(4);
-    root->left->right = new Node(5);
-    root->right->right = new Node(6);
-    queue<Node>q;
-    for(int i=0; i<n; i++){
-        
+    Node* root=NULL;
+    Node* r=root;
+    queue<Node*>q;
+    for(int i=1;i<=15;i++){
+         r=insertionCBT(r,i,q);
     }
-    vector<vector<int>> levels = levelOrder(root);
+
+    vector<vector<int>> levels = levelOrder(r);
     for (auto &level : levels) {
         for (int val : level)
             cout << val << " ";
