@@ -32,7 +32,6 @@ void Merge_sort(int arr[], int l, int r, int n)
         Merge(arr, l, r, mid, n);
     }
 }
-
 int main()
 {
     int n;
@@ -42,7 +41,6 @@ int main()
     {
         cin >> arr[i];
     }
-
     Merge_sort(arr, 0, n - 1, n);
 
     for (int i = 0; i < n; i++)

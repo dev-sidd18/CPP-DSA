@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 int partition(int arr[], int l, int r) {
     int pivot = arr[r];
     int i = l - 1;
@@ -19,6 +20,7 @@ void Quick_sort(int arr[], int l, int r) {
         Quick_sort(arr, p + 1, r);
     }
 }
+
 int main() {
     int arr[9] = {1, 9, 8, 4, 5, 7, 3, 2, 6};
     Quick_sort(arr, 0, 8);

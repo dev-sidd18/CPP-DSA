@@ -33,7 +33,6 @@ void deleteElement() {
 
     n--;
 }
-
 void display() {
 
     if(n == 0) {
@@ -49,7 +48,6 @@ void display() {
 }
 
 int main() {
-
     insert(5);
     insert(2);
     insert(8);
